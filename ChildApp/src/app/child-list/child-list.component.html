@@ -1,0 +1,43 @@
+
+
+<div class="table-responsive">
+  Child First Name <input #cfname placeholder="Child First Name"  /> Child Last Name <input #clname placeholder="Child Last Name"  />  <input class="btn btn-primary btn-sm" type="button" (click)="onSubmit(cfname.value,clname.value)" value="Search">
+
+</div>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-nowrap">
+    <thead>
+      <tr>
+        <th>Child First Name</th>
+        <th>Child Last Name</th>
+        <th>DOB</th>
+        <th>primary contact phone</th>
+        <th>primary contact name</th>
+        <th>primary contact email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <ng-container *ngIf="child?.length>0 else noRecord">
+      <tr *ngFor="let item of child">
+        <td>{{item.ChildFirstName}}</td>
+        <td>{{item.ChildLastName}}</td>
+        <td>{{item.ChildBirthDate}}</td>
+        <td>{{item.Parent1CellPhone}}</td>
+        <td>{{item.Parent1FirstName}} {{item.Parent1LastName}}</td>
+        <td>{{item.Parent1Email}}</td>
+        <td class="tc">
+          <a href="javascript:void(0)" (click)="onEdit(item.ChildID)" title="Edit Record">Edit</a> &nbsp;
+          <a href="javascript:void(0)" (click)="onDelete(item.ChildID)" title="Delete Record" class="sDelete">Delete</a>&nbsp;
+          <a (click)="onDocumentUpload(item.ChildID)" title="upload">Upload</a>
+        </td>
+      </tr>
+    </ng-container>
+    <tbody></tbody>
+  </table>
+</div>
+<ng-template #noRecord>
+  <tr><td colspan="6">No Record found</td></tr>
+</ng-template>
+<tbody></tbody>
+
+

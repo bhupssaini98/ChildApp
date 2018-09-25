@@ -1,0 +1,120 @@
+<div>
+  <h4>--------------------------------------------------------------------------Child Info -------------------------------------------------------------------------------------</h4>
+  <div>
+    Child First Name :<input id="cfname" [(ngModel)]="childinfo.ChildFirstName" />
+    Child Last Name : <input id="clname" [(ngModel)]="childinfo.ChildLastName" />
+    Child DOB :       <input id="clname" [(ngModel)]="childinfo.ChildBirthDate" />
+    ChildAddress :    <input id="clname" [(ngModel)]="childinfo.ChildAddress" />
+
+
+    Child Gender :  <select [(ngModel)]="childinfo.ChildGender">
+      <option value="0">Select</option>
+      <option *ngFor="let G of Gender" value={{G.Value}}>{{G.Text}}</option>
+    </select>
+    ChildStatus:<select [(ngModel)]="childinfo.ChildStatus">
+      <option value="0">Select</option>
+      <option *ngFor="let St of Status" value="{{St.Value}}">{{St.Text}}</option>
+    </select>
+    ChildType<select [(ngModel)]="childinfo.ChildType">
+  <option value="0">Select</option>
+  <option *ngFor="let ty of Type" value="{{ty.Value}}">{{ty.Text}}</option>
+</select>
+  </div>
+
+  <h4>-----------------------------------------------------------------------------Parent1 Info-----------------------------------------------------------------------------------</h4>
+
+  <div>
+    Parent1FirstName : <input id="clname" [(ngModel)]="childinfo.Parent1FirstName" />
+    Parent1LastName : <input id="clname" [(ngModel)]="childinfo.Parent1LastName" />
+    Parent1Private : <input id="clname" [(ngModel)]="childinfo.Parent1Private" />
+    Parent1Gender : <select [(ngModel)]="childinfo.Parent1Gender">
+      <option value="0">Select</option>
+      <option *ngFor="let G of Gender" value={{G.Value}}>{{G.Text}}</option>
+    </select>
+    Parent1ChildRelation : <select [(ngModel)]="childinfo.Parent1ChildRelation">
+      <option value="0">Select</option>
+      <option *ngFor="let re of ChildRelation" value={{re.Value}}>{{re.Text}}</option>
+    </select>
+    Parent1Address : <input id="clname" [(ngModel)]="childinfo.Parent1Address" />
+    Parent1Unit : <input id="clname" [(ngModel)]="childinfo.Parent1Unit" />
+    <h4></h4>
+    Parent1City : <input id="clname" [(ngModel)]="childinfo.Parent1City" />
+    Parent1Province : <input id="clname" [(ngModel)]="childinfo.Parent1Province" />
+    Parent1PostalCode : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent1PostalCode" />
+    Parent1HomePhone : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent1HomePhone" />
+
+    <h4></h4>
+
+    Parent1WorkPhone : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent1WorkPhone" />
+    Parent1CellPhone : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent1CellPhone" />
+    Parent1Email : <input id="clname" [(ngModel)]="childinfo.Parent1Email" />
+    <!--Parent1PrimaryEmail: <label >
+      <input  type="radio" name="mode" [value]="true" [(ngModel)]="rule.mode"> Yes
+    </label>
+    <label >
+      <input  type="radio" name="mode" [value]="false" [(ngModel)]="rule.mode">No
+    </label>-->
+    Parent1Comments : <input id="clname" [(ngModel)]="childinfo.Parent1Comments" />
+    Parent1SpecialCustody : <input id="clname" [(ngModel)]="childinfo.Parent1SpecialCustody" />
+
+
+    <h4>-----------------------------------------------------------------------------Parent2 Info-----------------------------------------------------------------------------------</h4>
+
+    <div>
+      Parent2FirstName : <input id="clname" [(ngModel)]="childinfo.Parent2FirstName" />
+      Parent2LastName : <input id="clname" [(ngModel)]="childinfo.Parent2LastName" />
+      Parent2Private : <input id="clname" [(ngModel)]="childinfo.Parent2Private" />
+      Parent2Gender : <select [(ngModel)]="childinfo.Parent2Gender">
+        <option value="0">Select</option>
+        <option *ngFor="let G of Gender" value={{G.Value}}>{{G.Text}}</option>
+      </select>
+      Parent2ChildRelation : <select [(ngModel)]="childinfo.Parent2ChildRelation">
+        <option value="0">Select</option>
+        <option *ngFor="let re of ChildRelation" value={{re.Value}}>{{re.Text}}</option>
+      </select>
+      Parent2Address : <input id="clname" [(ngModel)]="childinfo.Parent2Address" />
+      Parent2Unit : <input id="clname" [(ngModel)]="childinfo.Parent2Unit" />
+      <h4></h4>
+      Parent2City : <input id="clname" [(ngModel)]="childinfo.Parent2City" />
+      Parent2Province : <input id="clname" [(ngModel)]="childinfo.Parent2Province" />
+      Parent2PostalCode : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent2PostalCode" />
+      Parent2HomePhone : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent2HomePhone" />
+
+      <h4></h4>
+      Parent2WorkPhone : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent2WorkPhone" />
+      Parent2CellPhone : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.Parent2CellPhone" />
+      Parent2Email : <input id="clname" [(ngModel)]="childinfo.Parent2Email" />
+      <!--Parent2PrimaryEmail:-->
+      Parent2Comments : <input id="clname" [(ngModel)]="childinfo.Parent2Comments" />
+      Parent2SpecialCustody : <input id="clname" [(ngModel)]="childinfo.Parent2SpecialCustody" />
+
+    </div>
+
+    <h4>-----------------------------------------------------------------------------Sibling Info-----------------------------------------------------------------------------------</h4>
+
+    <div>
+      SiblingName : <input id="clname" [(ngModel)]="childinfo.SiblingName" />
+      SiblingAge : <input id="clname" [OnlyNumber]="true" [(ngModel)]="childinfo.SiblingAge" />
+      SiblingGender : <select [(ngModel)]="childinfo.SiblingGender">
+        <option value="0">Select</option>
+        <option *ngFor="let G of Gender" value={{G.Value}}>{{G.Text}}</option>
+      </select>
+    </div>
+    <h4>-----------------------------------------------------------------------------Emergency Contact Info-----------------------------------------------------------------------------------</h4>
+    <div>
+      Contact1Name : <input id="clname" [(ngModel)]="childinfo.Contact1Name" />
+      Contact1Phone : <input [OnlyNumber]="true" id="clname" [(ngModel)]="childinfo.Contact1Phone" />
+      Contact1Email : <input id="clname" [(ngModel)]="childinfo.Contact1Email" />
+      Contact1Address : <input id="clname" [(ngModel)]="childinfo.Contact1Address" />
+      Contact1Relationship :  <select [(ngModel)]="childinfo.Contact1Relationship">
+        <option value="0">Select</option>
+        <option *ngFor="let re of ChildRelation" value={{re.Value}}>{{re.Text}}</option>
+      </select>
+    </div>
+
+  </div>
+  </div>
+ 
+
+  <input type="button" class="btn btn-primary btn-sm" value="Submit Record" (click)="onSubmit(childinfo)" />
+
